@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: devops_exam
+  name: ques6
+spec:
+  ports: ~
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops_exam
+  template:
+    metadata:
+      labels:
+        app: devops_exam
+    spec:
+      containers:
+        -
+          image: chimaiberi1990/devops-project:v2
+          name: mywebpage3
